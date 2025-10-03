@@ -16,6 +16,10 @@ return new class extends Migration
             $table->foreignId('position_id')->constrained('positions')->cascadeOnDelete();
             $table->string('status')->default('Registered'); // <-- Add this line
             $table->timestamps();
+
+            $table->index('status');
+            $table->index('position_id');
+            $table->index('party_id');
         });
     }
 

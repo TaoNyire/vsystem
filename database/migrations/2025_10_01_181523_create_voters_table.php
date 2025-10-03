@@ -13,11 +13,13 @@ return new class extends Migration
             $table->string('last_name');
             $table->string('first_name');
             $table->enum('gender', ['M', 'F']);
-            $table->enum('status', ['Registered', 'Not Registered']);
+            $table->enum('status', ['Registered', 'Not Registered'])->index();
             $table->date('registration_date');
             $table->string('categories')->nullable();
             $table->string('constituency_ward')->nullable();
             $table->timestamps();
+
+            $table->index('gender');
         });
     }
 

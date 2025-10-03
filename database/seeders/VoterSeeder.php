@@ -134,7 +134,18 @@ class VoterSeeder extends Seeder
         ];
 
         foreach ($voters as $voter) {
-            Voter::create($voter);
+            Voter::updateOrCreate(
+                ['voter_registration_number' => $voter['voter_registration_number']],
+                [
+                    'last_name' => $voter['last_name'],
+                    'first_name' => $voter['first_name'],
+                    'gender' => $voter['gender'],
+                    'status' => $voter['status'],
+                    'registration_date' => $voter['registration_date'],
+                    'categories' => $voter['categories'],
+                    'constituency_ward' => $voter['constituency_ward'],
+                ]
+            );
         }
     }
 }

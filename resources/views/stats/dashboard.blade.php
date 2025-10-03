@@ -30,6 +30,11 @@
                 % Female Voters for Female Candidates vs Male Voters for Male Candidates
             </a>
         </div>
+        <div class="col-md-4 mb-3">
+            <a href="{{ route('vote.create') }}" class="btn btn-outline-primary w-100">
+                Cast Your Vote (President, MP, Councillor)
+            </a>
+        </div>
     </div>
 </div>
 @endsection

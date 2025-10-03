@@ -13,7 +13,7 @@ class Vote extends Model
         'voter_id',
         'candidate_id',
         'vote_type',           // <-- Add this line
-        'constituency_ward',   // <-- Add this line
+        'ward',   // <-- Add this line
     ];
 
     // Relationships
